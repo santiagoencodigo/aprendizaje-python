@@ -135,13 +135,13 @@ while True:    #    Ciclo infinito hasta que el usuario decida salir
 
 
                 #INPUT
-            galvis_ejercicios = int(input("¿Qué ejercicio deseas ver?"))
+            galvis_ejercicios_listas = int(input("¿Qué ejercicio deseas ver? : "))
 
 
 
                 # Ejercicio 1: Realizar operaciones básicas con listas
 
-            if galvis_ejercicios == 1 :
+            if galvis_ejercicios_listas == 1 :
 
                 print()
                 print("Ejercicio 1: Realizar operaciones básicas con listas")
@@ -174,8 +174,9 @@ while True:    #    Ciclo infinito hasta que el usuario decida salir
 
                 #Ejercicio 2: Realizar manipulación de listas
 
-            elif galvis_ejercicios == 2:
+            elif galvis_ejercicios_listas == 2:
 
+                my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
                 print()
                 print("Ejercicio 2: Realizar manipulación de listas")
 
@@ -186,25 +187,46 @@ while True:    #    Ciclo infinito hasta que el usuario decida salir
 
                 print()
                 my_list[1] = 200
-                print("Al asignarle un valor, la lista se actualiza sóla: ", my_list)
+                print("my_list[1] = 200")
+                print("De la lista, en la posición 2 será = a 200.")
+                print("Por lo que: ", my_list)
+                print()
 
                     # Añadir Elemento: 600 al final de la lista  e imprimir de nuevo la lista 
 
-                print()
                 my_list.append(600)
-                print("La lista despues de usar Append: ", my_list)
+                print("my_list.append(600)")
+                print("La lista despues de usar Append para añadirle el numero 600 al final: ", my_list)
+                print()
 
                     # Insertar Elemento: 300 en la tercera posición de la lista e imprimir a lista actualizada
 
                 my_list.insert(2, 300) #En el indice 2 de la lista, remplazar el valor por 300
-                print("Al insertarle un numero en la posición: ", my_list)
+                print("my_list.insert(2, 300)")
+                print("Al insertarle el numero 300 en la tercera posición: ", my_list)
+                print()
 
                     # Eliminar Elemento por valor: Elimina 600 de la lista e imprime la lista 
 
                 my_list.remove(600)
-                print("La lista al remover ese elemento: ", my_list)
+                print("my_list.remove(600)")
+                print("La lista al remover el nuevo elemento al final de la lista - 600 : ", my_list)
+                print()
 
                     # Eliminar Elemento por indice: Elimina el primer elemento de la lista e imprime la lista
+
+                del my_list[0]  
+                print("del my_list[0]")   
+                print("La lista al eliminar el elemento de la posición 0: ")
+                print(my_list)    
+
+
+
+                # Ejercicio 3: Suma y promedio de todos los números de una lista
+
+            elif galvis_ejercicios_listas == 3:
+                print()
+                print("Ejercicio 3: Suma y promedio de todos los números de una lista")       
 
             elif galvis_ejercicios ==10:  #  Juegos con listas { }  -->  DEL = DELETE
 
@@ -260,7 +282,12 @@ while True:    #    Ciclo infinito hasta que el usuario decida salir
                 print(diccionario3)
 
         elif galvis_seleccion == 2:
+            print()
             print("Ejercicios de DICCIONARIOS")
+            print("Estos ejercicios fueron propuestos por    ING. Galvis")
+
+
+            
 
         elif galvis_seleccion == 3: 
             print("Ejercicios de TUPLAS")
