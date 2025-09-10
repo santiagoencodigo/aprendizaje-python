@@ -37,9 +37,9 @@ El objetivo es servir como una guía de estudio y práctica continua para fortal
 
 ### Tipos de datos
 
-#### int - entero
+### int - entero
 
-    > Representa un número entero
+> Representa un número entero
 
 ## float - flotante
 
@@ -76,13 +76,34 @@ Las listas de Python **son la estructura de datos más utilizada**, por lo que e
 
 ## set - conjunto
 
-## diccionario - dict
+---
 
-    ```
-    diccionario = {"clave1": "valor1", "clave1"}
-    ```
+## Diccionario - Dict
 
-+ complex - numeros complejos
+Un diccionario es una estructura de datos en Python que permite almacenar información en pares de clave → valor.
+
+```diccionario = { "clave1": "valor1", "clave2:"valor2" }```
+
+Los valores pueden ser de cualquier tipo de dato: números, cadenas, listas, otros diccionarios, etc. Se pueden agregar, eliminar, modificar elementos despues de crearlo.
+
+Estos se definen con llaves: { } , separando clave con valor por medio de : , y los pares con comas ,.
+
+```
+diccionario = {
+    "clave1" : "valor1",
+    "clave2" : "valor2",
+    "clave3" : "valor3"
+}
+
+persona = {
+    "nombre" : "santiago",
+    "edad" : "17",
+    "lenguajes" : "HTML, CSS, JS, PYTHON",
+    "activo": True
+}
+```
+
+### complex - numeros complejos
 
 
 <!-- TEMA MATRIZ -->
@@ -107,3 +128,4 @@ __def nombre_de_la_funcion(parametro1, parametro2)__
 ```
 
 hay que realizar el codigo de unas historias de usuario 
+
