@@ -26,6 +26,14 @@ Además, se incluyen prácticas con estructuras de control como condicionales, c
 
 El objetivo es servir como una guía de estudio y práctica continua para fortalecer habilidades en Python y sentar bases sólidas en la programación.
 
+<!-- Indice de contenido -->
+
+## Contenido
+
+* Lista
+
+* 
+
 ### Se explica más a fondo:
 
 + Condicionales
@@ -128,4 +136,5 @@ __def nombre_de_la_funcion(parametro1, parametro2)__
 ```
 
 hay que realizar el codigo de unas historias de usuario 
+
 
