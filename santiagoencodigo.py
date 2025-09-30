@@ -22,7 +22,10 @@ while True: # Ciclo infinito para que el usuario escoja ejercicio hasta que el u
     print("Inserte el numero 1 para - Mirar Ejercicios de LISTAS")
     print("Inserte el numero 2 para - Mirar Ejercicios de DICCIONARIOS")  
     print("Inserte el numero 3 para - Mirar Ejercicios de TUPLAS") 
-    print("Inserte el numero 4 para - Mirar Ejercicios de CONJUNTOS")  
+    print("Inserte el numero 4 para - Mirar Ejercicios de CONJUNTOS") 
+    print("Inserte el numero 5 para - Mirar Ejercicios de CLASES")  
+    print("Inserte el numero 6 para - Mirar Ejercicios de OBJETOS")  
+ 
     print()
     print()
 
@@ -486,10 +489,150 @@ while True: # Ciclo infinito para que el usuario escoja ejercicio hasta que el u
             print("Estos ejercicios fueron propuestos por    ING. Galvis")
 
     elif seleccion == 3: 
+            print()
             print("Ejercicios de TUPLAS")
 
     elif seleccion == 4:
-            print("Ejercicios de CONJUNTOS") 
+            print()
+            print("Ejercicios de CONJUNTOS")
+    
+    elif seleccion == 5:
+            print()
+            print("Ejercicios de CLASE")
+
+    elif seleccion == 6:
+            print()
+            print("Ejercicios de OBJETOS") # Selección de Ejercicios
+            print()
+
+            print("Seleccione 1 para el ejercicio 1")
+            print("Seleccione 2 para el ejercicio 2")
+            print("Seleccione 3 para el ejercicio 3")
+            print("Seleccione 4 para el ejercicio 4")
+            print("Seleccione 5 para el ejercicio 5")
+            print("Seleccione 6 para el ejercicio 6")
+            print("Seleccione 7 para el ejercicio 7")
+
+            print()
+
+            seleccion_objetos = int(input("¿Cual ejercicio desea ver?"))
+
+            if seleccion_objetos == 1: # En proceso - No se ha terminado
+                print("")
+                print("Realizar un programa que conste de una clase llamada Estudiante, que tenga como atributos el nombre y la nota del alumno. Definir los métodos para inicializar sus atributos, imprimirlos y mostrar un mensaje con el resultado de la nota y si ha aprobado o no.")
+                print()
+
+                # El objetivo de este ejercicio es:
+
+                # Crear una clase Estudiante con dos atributos (nombre y nota) y con métodos para:
+
+                # - Inicializar (constructor)
+                # - Imprimir sus datos
+                # - Determinar si aprobó o no
+                # - Mostrar un mensaje con el resultado                
+
+                class Estudiante:
+                    #  Clase estudiante con nombre y nota:
+                    def __init__(self, nombre: str, nota: float) -> None:
+                        self.nombre = nombre.strip()
+                        self.nota = float(nota)
+
+                    def mostrar(self) -> None:
+                        # Imprime los datos del estudiante en pantalla
+                        print(f"Nombre: {self.nombre}")
+                        print(f"Nota: {self.nota:.2f}")
+
+                    def aprobado(self, umbral: float = 3.0) -> bool:
+                        # Devuelve true si la nota es mayor o igual al umbral
+                        return self.nota >= umbral
+                    
+                    def mensaje_resultado(self, umbral: float = 3.0) -> None:
+                        # Muestra mensaje si aprobó o no
+                        if self.aprobado(umbral):
+                            print(f"{self.nombre} ha aprobado con una nota de: {self.nota:.2f}. ¡Felicidades!")
+                        else:
+                            print(f"{self.nombre} no aprobó con una nota de {self.nota:.2f}. Tienes que repasar.")
+
+                    def __str__(self) -> str:
+                        # Representación en cadena util para debuggin
+                        return f"Estudiante(nombre = {self.nombre!r}, nota = {self.nota:.2f})"
+                    
+
+                    # Funciones Auxiliares que Aportan a la Interacción:
+
+                    def pedir_nombre() -> str:
+                        nombre = input("Ingrese el nombre del estudiante").strip()
+                        return nombre or "Sin nombre"
+                    
+                    def pedir_nota(escala_max: float = 5.0) -> float:
+                        # Pide una nota y valida que sea entre 0 y la escala maxima = 5
+                        while True:
+                            entrada = input(f"Ingresa la nota (0 - {escala_max}): ").strip()
+                            try:
+                                nota = float(entrada)
+                            except ValueError:
+                                print("Valor no valido. Debes ingresar un numero (ej: 4.2). Intenta otra vez")
+                                continue
+                            if 0.0 <= nota <= escala_max:
+                                return nota
+                            print(f"La nota debe estar entre 0 y {escala_max}. Intenta otra vez.")
+                    
+
+                    # Flujo Principal
+                    
+                    def main() -> None:
+                        print("==Crear Estudiante==")     
+                        nombre = pedir_nombre()
+                        nota = pedir_nota(5.0) #Cambia 5.0 por otro numero de acuerdo al valor de la escala_max
+                        estudiante = Estudiante(nombre, nota)
+
+                        print("Datos del estudiante:")
+                        estudiante.mostrar()
+                        print()
+                        estudiante.mensaje_resultado(umbral=3.0) # Cambia el umbral si la escala es distinta
+
+                    if __name__ == "__main__":
+                        main()
+                        
+
+
+            if seleccion_objetos == 2:
+                print("")
+                print('Crea una clase “Persona”. Con atributos nombre y edad. Además, hay que crear un método “cumpleaños”, que aumente en 1 la edad de la persona cuando se invoque sobre un objeto creado con “Persona”. Tendríamos que lograr ejecutar el siguiente código con la clase creada:')
+                
+
+            if seleccion_objetos == 3:
+                print()
+                print("Realizar un programa en el cual se declaren dos valores enteros por teclado utilizando el método __init__. Calcular después la suma, resta, multiplicación y división. Utilizar un método para cada una e imprimir los resultados obtenidos. Llamar a la clase Calculadora.")
+
+
+            if seleccion_objetos == 4:
+                print()
+                print("Crear una clase “Persona” que sea la clase padre de otra clase “Estudiante”. Por tanto: En la clase “Persona” su método __init__() debe de estar preparado para recibir nombre y apellido. Además, esta clase , debe tener un método para mostrar nombre_completo() el cual debe mostrar el nombre acompañado del apellido. La otra clase “Estudiante”, debe de poder heredar de “Persona”, y además recibir los argumentos nombre y edad. También la clase “Estudiante”, recibe el valor “carrera”, y además contar con un método mostrar_carrera(). Las dos clases son obligatorias.")
+                print()
+
+
+            if seleccion_objetos == 5:
+                print()
+                print("Crear una clase Fabrica que tenga los atributos de Llantas, Color y Precio; luego crear dos clases más que hereden de Fabrica, las cuales son Moto y Carro. Crear métodos que muestren la cantidad de llantas, color y precio de ambos transportes. Por último, crear objetos para cada clase y mostrar por pantalla los atributos de cada uno.")
+                print()
+
+
+            if seleccion_objetos == 6:
+                print()
+                print("Crear una clase llamada Marino(), con un método que sea hablar, en donde muestre un mensaje que diga «Hola, soy un animal marino!». Luego, crear una clase Pulpo() que herede Marino, pero modificar el mensaje de hablar por «Hola soy un Pulpo!». Por último, crear una clase Foca(), heredada de Marino, pero que tenga un atributo nuevo llamado mensaje y que muestre ese mensaje como parámetro.")      
+                print()     
+
+
+            if seleccion_objetos == 7:
+                print()
+                print("Desarrollar un programa con tres clases: La primera debe ser Universidad, con atributos nombre (Donde se almacena el nombre de la Universidad). La segunda llamada Carerra, con los atributos especialidad (En donde me guarda la especialidad de un estudiante). Y por último, una llamada Estudiante, que tenga como atributos su nombre y edad. El programa debe imprimir la especialidad, edad, nombre y universidad de dicho estudiante con un objeto llamado persona.")  
+                print()
+
+
+
+
+
 
     # Ultima opción por descarte en python
     else:
